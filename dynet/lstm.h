@@ -282,7 +282,7 @@ struct VanillaLSTMBuilder : public RNNBuilder {
   /**
    * \brief Set mask for recurrent weight matrices at the beginning of new sequence
    */ 
-  void set_dropconnect_masks();
+  void update_dropconnect();
 
   /**
    * \brief Get parameters in VanillaLSTMBuilder
@@ -330,7 +330,6 @@ public:
   bool dropout_masks_valid;
 
   float dropconnect_rate;
-  bool dropconnect_masks_valid;
 
 private:
   ComputationGraph* _cg; // Pointer to current cg

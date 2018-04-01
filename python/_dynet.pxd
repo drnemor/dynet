@@ -504,7 +504,7 @@ cdef extern from "dynet/lstm.h" namespace "dynet":
         void set_dropout_masks(unsigned batch_size)
         void set_dropconnect(float d)
         void disable_dropconnect()
-        void set_dropconnect_masks()
+        void update_dropconnect()
 
         vector[vector[CParameters]] params
         vector[vector[CExpression]] param_vars

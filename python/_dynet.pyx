@@ -5334,8 +5334,8 @@ cdef class VanillaLSTMBuilder(_RNNBuilder): # {{{
     cpdef void disable_dropconnect(self):
         self.thisvanillaptr.disable_dropconnect()
     
-    cpdef set_dropconnect_masks(self):
-        self.thisvanillaptr.set_dropconnect_masks()
+    cpdef update_dropconnect(self):
+        self.thisvanillaptr.update_dropconnect()
         
     def whoami(self): return "VanillaLSTMBuilder"
 # VanillaLSTMBuilder }}}
